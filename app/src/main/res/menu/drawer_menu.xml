@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <!--为item添加图片可使用android:icon=""-->
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_camera"
+            android:title="成绩" />
+        <item
+            android:id="@+id/nav_gallery"
+            android:title="考勤" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:title="考试时间" />
+        <item
+            android:id="@+id/nav_manage"
+            android:title="奖惩情况" />
+    </group>
+
+    <item android:title="其他">
+        <menu>
+            <item
+                android:id="@+id/card_top_up"
+                android:title="饭卡充值" />
+        </menu>
+    </item>
+</menu>

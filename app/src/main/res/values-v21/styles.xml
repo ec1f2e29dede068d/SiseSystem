@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat">
+    </style>
+
+    <style name="AppTheme.NoActionBar" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="numberPickerStyle">@style/NPWidget.Holo.NumberPicker</item>
+    </style>
+
+    <style name="Index" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="colorPrimary">#3F51B5</item>
+        <item name="colorPrimaryDark">#303F9F</item>
+        <item name="colorAccent">#FF4081</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <style name="Login" parent="Theme.AppCompat.NoActionBar">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:background">#FFFFFF</item>
+        <item name="colorAccent">#757575</item>
+        <item name="colorPrimaryDark">#BDBDBD</item>
+        <item name="android:textColorPrimary">#757575</item>
+        <item name="android:textColorSecondary">#BDBDBD</item>
+        <item name="android:textColor">#FFF</item>
+    </style>
+
+    <!--<style name="AppTheme.AppBarOverlay" parent="AppTheme.NoActionBar" />-->
+
+    <!--<style name="AppTheme.PopupOverlay" parent="Theme.AppCompat" />-->
+
+    <style name="LaunchTheme" parent="Theme.AppCompat">
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">false</item>
+        <item name="android:navigationBarColor">@android:color/transparent</item>
+        <item name="android:statusBarColor">@android:color/transparent</item>
+        <item name="android:windowBackground">@drawable/first_screen</item>
+    </style>
+</resources>

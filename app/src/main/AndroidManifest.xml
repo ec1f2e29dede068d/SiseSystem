@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.c.demo">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission-sdk-23 android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <service
+            android:name="w.c.service.StoreService"
+            android:enabled="true"
+            android:exported="true"></service>
+
+        <activity
+            android:name="w.c.ui.LaunchActivity"
+            android:theme="@style/LaunchTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity> <!-- android:windowSoftInputMode="adjustPan" : 设置软键盘在遮挡输入框时界面上移 -->
+        <!-- android:theme="@style/LoginActivity" -->
+        <activity
+            android:name="w.c.ui.LoginActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar"
+            android:windowSoftInputMode="adjustPan" /> <!-- android:theme="@style/MainActivity" -->
+        <activity
+            android:name="w.c.ui.MainActivity"
+            android:label="@string/title_activity_index"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name="w.c.ui.ScoreActivity"
+            android:label="成绩" />
+        <activity
+            android:name="w.c.ui.TestTimeActivity"
+            android:label="考试时间" />
+        <activity
+            android:name="w.c.ui.AttendanceActivity"
+            android:label="考勤" />
+        <activity android:name="w.c.ui.CartTopUpActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+            </intent-filter>
+        </activity>
+
+        <service
+            android:name="w.c.service.ClassService"
+            android:enabled="true"
+            android:exported="true" />
+
+        <receiver android:name="w.c.receiver.ClassReceiver" />
+    </application>
+
+</manifest>
