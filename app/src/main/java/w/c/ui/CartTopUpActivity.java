@@ -8,6 +8,7 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ImageView;
+import android.widget.ProgressBar;
 import android.widget.TextView;
 
 import com.example.c.demo.R;
@@ -18,10 +19,11 @@ public class CartTopUpActivity extends AppCompatActivity {
     Bitmap bitmap;
     CardHandler cardHandler;
     ImageView imageView;
-    Button submitBtn,loginBtn;
+    Button submitBtn, loginBtn;
     EditText username, password, amount, checkCode;
     TextView info;
     String result;
+    ProgressBar progressBar;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,11 +38,13 @@ public class CartTopUpActivity extends AppCompatActivity {
         amount = (EditText) findViewById(R.id.amount);
         checkCode = (EditText) findViewById(R.id.checkCode);
         info = (TextView) findViewById(R.id.info);
+        progressBar = (ProgressBar) findViewById(R.id.progressBar2);
 
         new Thread() {
             @Override
             public void run() {
                 super.run();
+                progressBar.setVisibility(View.VISIBLE);
                 cardHandler = new CardHandler();
                 cardHandler.setCookie1();
                 bitmap = BitmapFactory.decodeStream(cardHandler.getRandomImg());
@@ -48,6 +52,7 @@ public class CartTopUpActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         imageView.setImageBitmap(bitmap);
+                        progressBar.setVisibility(View.GONE);
                     }
                 });
             }
@@ -91,6 +96,7 @@ public class CartTopUpActivity extends AppCompatActivity {
         imageView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                progressBar.setVisibility(View.VISIBLE);
                 new Thread() {
                     @Override
                     public void run() {
@@ -100,6 +106,7 @@ public class CartTopUpActivity extends AppCompatActivity {
                             @Override
                             public void run() {
                                 imageView.setImageBitmap(bitmap);
+                                progressBar.setVisibility(View.GONE);
                             }
                         });
                     }

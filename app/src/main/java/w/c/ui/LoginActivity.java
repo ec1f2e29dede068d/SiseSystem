@@ -85,8 +85,10 @@ public class LoginActivity extends Activity implements View.OnFocusChangeListene
             public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
                 if (isChecked) {
                     passWordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_VISIBLE_PASSWORD);
+                    passWordEditText.setSelection(passWordEditText.getText().length());
                 } else {
                     passWordEditText.setInputType(InputType.TYPE_TEXT_VARIATION_PASSWORD | InputType.TYPE_CLASS_TEXT);
+                    passWordEditText.setSelection(passWordEditText.getText().length());
                 }
             }
         });
