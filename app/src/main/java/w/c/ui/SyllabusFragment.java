@@ -102,7 +102,6 @@ public class SyllabusFragment extends Fragment {
                 }.start();
             }
         });
-
         return view;
     }
 

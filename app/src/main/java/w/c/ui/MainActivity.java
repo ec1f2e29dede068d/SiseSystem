@@ -164,7 +164,8 @@ public class MainActivity extends AppCompatActivity
     public boolean onOptionsItemSelected(MenuItem item) {
         switch (item.getItemId()) {
             case R.id.changeSemester:
-                View view = LayoutInflater.from(this).inflate(R.layout.dialog_semester_select, null, false);
+                View view = LayoutInflater.from(this).inflate(R.layout.dialog_semester_select,
+                        null, false);
                 final NumberPicker numberPicker = view.findViewById(R.id.numberPicker);
                 numberPicker.setMinValue(2017);
                 numberPicker.setMaxValue(2020);
@@ -182,7 +183,9 @@ public class MainActivity extends AppCompatActivity
                         new Thread() {
                             @Override
                             public void run() {
-                                final ArrayList<String> arrayList = MyController.getSyllabus(numberPicker.getValue(), numberPicker2.getValue());
+                                final ArrayList<String> arrayList
+                                        = MyController.getSyllabus(numberPicker.getValue(),
+                                        numberPicker2.getValue());
                                 for (int i = arrayList.size() - 1; i >= 0; i--) {
                                     if (i % 8 == 6 || i % 8 == 7) {
                                         arrayList.remove(i);

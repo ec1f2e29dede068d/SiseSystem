@@ -101,6 +101,11 @@ public class CartTopUpActivity extends AppCompatActivity {
                     @Override
                     public void run() {
                         super.run();
+                        if (bitmap != null && !bitmap.isRecycled()) {
+                            bitmap.recycle();
+                            bitmap = null;
+                        }
+                        System.gc();
                         bitmap = BitmapFactory.decodeStream(cardHandler.getRandomImg());
                         runOnUiThread(new Runnable() {
                             @Override
@@ -125,5 +130,11 @@ public class CartTopUpActivity extends AppCompatActivity {
                 cardHandler.logout();
             }
         }.start();
+
+        if (bitmap != null && !bitmap.isRecycled()) {
+            bitmap.recycle();
+            bitmap = null;
+        }
+        System.gc();
     }
 }
