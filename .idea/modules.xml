@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/NumberPicker/NumberPicker.iml" filepath="$PROJECT_DIR$/NumberPicker/NumberPicker.iml" />
-      <module fileurl="file://$PROJECT_DIR$/SiseSystemLogin.iml" filepath="$PROJECT_DIR$/SiseSystemLogin.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/NumberPicker/NumberPicker.iml" filepath="$PROJECT_DIR$/NumberPicker/NumberPicker.iml" group="SiseSystemLogin/NumberPicker" />
+      <module fileurl="file://$PROJECT_DIR$/SiseSystemLogin.iml" filepath="$PROJECT_DIR$/SiseSystemLogin.iml" group="SiseSystemLogin" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="SiseSystemLogin/app" />
     </modules>
   </component>
 </project>

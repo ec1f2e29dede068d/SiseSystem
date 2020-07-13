@@ -5,6 +5,11 @@ package net.simonvt.numberpicker;
 
 public final class BuildConfig {
   public static final boolean DEBUG = false;
+  public static final String LIBRARY_PACKAGE_NAME = "net.simonvt.numberpicker";
+  /**
+   * @deprecated APPLICATION_ID is misleading in libraries. For the library package name use LIBRARY_PACKAGE_NAME
+   */
+  @Deprecated
   public static final String APPLICATION_ID = "net.simonvt.numberpicker";
   public static final String BUILD_TYPE = "release";
   public static final String FLAVOR = "";
